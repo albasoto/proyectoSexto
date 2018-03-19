@@ -1,0 +1,58 @@
+*******UNIDAD HABITACIONAL***********
+*validar campos obligatorios(los de asteriscos---Tipo Unidad *,ID Unidad Habitacional,Valor Expensa *,Esta Arrendada,Esta Ocupada * ERROR)
+*validar que sea numero con un maximo de 4 decimales(Area Metros Cuadrados,Porcentaje Alicuota, Valor Expensa *)
+*Porcentaje Alicuota debe sumar 100(ERROR no suma 100%)
+*Porcentaje Alicuota si esta vacio debe mostrar como ERROR
+*Ubicación validar cuando es repetitivo (diferente a la direccion del condominio ALERTA)
+*Teléfono validar que sea numero con un minino de 7 maximo de 9 digitos(ALERTA)
+*Celular validar que tenga 10 digitos y empiece con 09 (ALERTA)
+*Esta Arrendada * cuando esta vacio poner YES (ALERTA)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*******CONTACTO -RESIDENTES***********
+* validar que debe existir UNIDAD (ERROR)
+* validar campos obligatorios (ID Unidad Habitacional *CI/RUC/Pasaporte *Relación *Nombre *Apellido *Representante * ERROR)
+* Validar espacios en blanco
+* validar CI/RUC (ALERTA)
+* CI/RUC cuando esta blanco GENERA (2 LETRAS DEL CONDOMINIO-OID-IDUNIDADHABITACIONAL) en minusculas 
+* Validar que lo generado sea menor a 15 caracteres (ERROR)
+* Relacion validar que exista un UNICO PROPIETARIO por unidad habitacional  (ERROR)
+* Validar correo electronico(ALERTA)
+* Representante validar UNICO representante por unidad habitacional (ALERTA)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*******PARQUEADERO BODEGAS***********
+* validar que debe existir UNIDAD (ERROR)
+* Validar campo obligatorio (ID Unidad Habitacional *IDENTIFICACION* ERROR)
+* validar que la identificacion del parqueadero y bodega se UNICA (ERROR)
+* Ubicacion repetitiva ALERTA
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*******CUENTAS POR COBRAR***********
+* validar que debe existir UNIDAD (ERROR)
+* validar campos obligatorios (ID Unidad Habitacional *	Rubro *	Fecha emisión *	Fecha Vencimiento Detalle *Valor *Modo*  ERROR)
+* validar formato fecha AÑO-MES-DIA (2017-04-30) (ERROR)
+* Fecha emisión MENOR A Fecha Vencimiento (ERROR)
+* Fecha Vencimiento MAYOR A Fecha emisión(ERROR)
+* 
+Valor se decimal MAYOR A CERO (ALERTA)
+* Modo depende de rubro (1: Cuota por Expensa ----(Alicuotas mensuales)
+2. Cuota Extraordinaria
+3. Cuota por seguro
+4. Pago servicios básicos---(Consumo de Agua,Consumo de Gas,Consumo de Energía)
+)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*******PROVEEDOR***********
+
+
+* validar datos obligatorios (RUC/CI/Pasaporte *	Razón Social *	Correo electrónico	Teléfono oficina *	Nombre representante *	Apellido representante *	Correo electrónico representante	Teléfono representante	Dirección		
+)
+* validar RUC menor a 15 caracteres 
+* RUC unico
+* tienes mismas validaciones que persona
+* 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*******CUENTAS POR PAGAR ***********
+* debe existir proveedor 
+* validar campos obligatorios (RUC/CI/Pasaporte PROVEEDOR *	Rubro *	Fecha de Factura *	Fecha de Vencimiento *	Número de Factura *	Detalle *	Valor *)
+* validar formato fecha AÑO-MES-DIA (2017-04-30) (ERROR)
+* Fecha factura MENOR A Fecha Vencimiento (ERROR)
+* Fecha Vencimiento MAYOR A Fecha emisión(ERROR)
+* valor mayor a cero umero decimal (ALERTA)
+
+
