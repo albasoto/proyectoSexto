@@ -1,5 +1,7 @@
-/vistas/
+/.DS_Store
 /controladores/
 /entidades/
-/validadores/
 /ficherosExcel/
+/interfaces/
+/validadores/
+/vistas/
